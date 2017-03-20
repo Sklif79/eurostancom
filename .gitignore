@@ -1,0 +1,25 @@
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+*.sass-cache
+~$1.xlsx
+workspace.xml
+
+# OS or Editor folders
+.DS_Store
+.cache
+.project
+.settings
+.tmproj
+.nvmrc
+.idea/*
+node_modules/*
+workspace.xml
+sftp-config.json
+Thumbs.db

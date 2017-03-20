@@ -1,0 +1,65 @@
+//= templates/head.html
+<body>
+<div class="mobile_width">
+    <div class="clearfix_">
+        <header class="mobile-header desktop_hidden flex_row">
+            <div class="mobile-header__logo">
+                <a href="">
+                    <img src="assets/images/mobile-logo.jpg" alt="">
+                </a>
+            </div>
+            <div class="mobile-header__icon">
+                <div class="mobile-header__icon-item">
+                    <a href="">
+                        <img src="assets/images/phone.png" alt="" title="">
+                    </a>
+                </div>
+                <div class="mobile-header__icon-item">
+                    <a href="">
+                        <img src="assets/images/mail.png" alt="" title="">
+                    </a>
+                </div>
+                <div class="mobile-header__icon-item">
+                    <a href="" class="lang-link">ru</a>
+                </div>
+            </div>
+            <div class="mobile-header__burger">
+                <div class="mobile-header__burger-inner"></div>
+            </div>
+            <div class="btn-close-aside desktop_hidden"></div>
+
+        </header>
+        <div class="flex_row stretch position_relative">
+            //= templates/aside.html
+            <div class="content wrapper">
+                <div class="wrapper-inner">
+                    //= templates/header.html
+                    <div class="bread-crumbs">
+                        <ul class="bread-crumbs__list container clearfix_">
+                            <li class="bread-crumbs__item">
+                                <a href="" class="bread-crumbs__item-text">Главная</a>
+                            </li>
+                            <li class="bread-crumbs__item">
+                                <span class="bread-crumbs__item-text">Ошибка 404</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="container main__content">
+                        <h1 class="title h1_title">ошибка 404</h1>
+                        <div class="content-error clearfix_">
+                            <img src="assets/images/404t.png" class="oops-image" alt="" title="">
+                            <div class="wrapper-error-content">
+                                <h3 class="title">Данная страница не найдена или не существует</h3>
+                                <p class="common__text">Неправильно набран адрес или данной страницы больше не
+                                    существует на сайте.
+                                    Приносим свои извинения.
+                                    Попробуйте перейти на другую страницу нашего сайта.</p>
+                                <div class="oops-button-block">
+                                    <a href="#" class="btn btn_yellow-theme">главная</a>
+                                    <a href class="btn btn_yellow-theme">карта сайта</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    //= templates/page-template-close.html

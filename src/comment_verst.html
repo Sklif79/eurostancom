@@ -1,0 +1,142 @@
+//= templates/head.html
+<body>
+<div class="mobile_width">
+    <div class="clearfix_">
+        <header class="mobile-header desktop_hidden flex_row">
+            <div class="mobile-header__logo">
+                <a href="">
+                    <img src="assets/images/mobile-logo.jpg" alt="">
+                </a>
+            </div>
+            <div class="mobile-header__icon">
+                <div class="mobile-header__icon-item">
+                    <a href="">
+                        <img src="assets/images/phone.png" alt="" title="">
+                    </a>
+                </div>
+                <div class="mobile-header__icon-item">
+                    <a href="">
+                        <img src="assets/images/mail.png" alt="" title="">
+                    </a>
+                </div>
+                <div class="mobile-header__icon-item">
+                    <a href="" class="lang-link">ru</a>
+                </div>
+            </div>
+            <div class="mobile-header__burger">
+                <div class="mobile-header__burger-inner"></div>
+            </div>
+            <div class="btn-close-aside desktop_hidden"></div>
+
+        </header>
+        <div class="flex_row stretch position_relative">
+            //= templates/aside.html
+            <div class="content wrapper">
+                <div class="wrapper-inner">
+                    //= templates/header.html
+                    <div class="bread-crumbs">
+                        <ul class="bread-crumbs__list container clearfix_">
+                            <li class="bread-crumbs__item">
+                                <a href="" class="bread-crumbs__item-text">Главная</a>
+                            </li>
+                            <li class="bread-crumbs__item">
+                                <a href="" class="bread-crumbs__item-text">Отзывы</a>
+                            </li>
+                            <li class="bread-crumbs__item">
+                                <span class="bread-crumbs__item-text">Отзыв подробнее</span>
+                            </li>
+                        </ul>
+                    </div>
+
+<div class="container">
+    <h1 class="title h1_title">Отзыв подробнее</h1>
+    <p class="common__text">
+        Мы работаем с многими крупными компаниями и организациями не первый год. Наши коллеги дают оценку нашему труду. Нам есть чем гордиться!
+    </p>
+    <div class="reviews-wrap">
+        <div class="review review-in-detail flex_row">
+            <div class="review__text">
+                <div class="review__top">
+                    <div class="flex_row flex_start">
+                        <div class="review__user-info">
+                            <div class="review__user-name">
+                                Павел Григорьевич Жуковец
+                            </div>
+                            <div class="review__user-work">
+                                главный технолог<br>ОАО "Могилевлифтмаш"
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review__bottom">
+                    <div class="review-content-wrap">
+                        <p class="review__content">
+                            Работаем с компанией ООО "Евростанком" уже довольно давно. За долгие годы работы компания показала себя только с положительно стороны как в профессиональном гибком подходе к решению различны технологических задач, так и в исполнении взятых на себя обязательств.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="review__image">
+                <div class="review__user-logo">
+                    <img src="assets/images/review-logo-lg.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="review__photos-row photos-row">
+            <div class="flex_row">
+                <a href="assets/images/eurostancom_comment_verst-01.jpg" data-uk-lightbox title="" class="photo-wrap">
+                    <div class="photo-wrap-inner text_center">
+                        <img src="assets/images/eurostancom_comment_verst-01.jpg" alt="">
+                    </div>
+                    <div class="photo-overlay"></div>
+                </a>
+                <a href="assets/images/eurostancom_comment_verst-02.jpg" data-uk-lightbox title="" class="photo-wrap">
+                    <div class="review__photo-wrap-inner text_center">
+                        <img src="assets/images/eurostancom_comment_verst-02.jpg" alt="">
+                    </div>
+                    <div class="photo-overlay"></div>
+                </a>
+                <a href="assets/images/eurostancom_comment_verst-03.jpg" data-uk-lightbox title="" class="photo-wrap">
+                    <div class="review__photo-wrap-inner text_center">
+                        <img src="assets/images/eurostancom_comment_verst-03.jpg" alt="">
+                    </div>
+                    <div class="photo-overlay"></div>
+                </a>
+                <a href="assets/images/eurostancom_comment_verst-04.jpg" data-uk-lightbox title="" class="photo-wrap">
+                    <div class="review__photo-wrap-inner text_center">
+                        <img src="assets/images/eurostancom_comment_verst-04.jpg" alt="">
+                    </div>
+                    <div class="photo-overlay"></div>
+                </a>
+            </div>
+        </div>
+
+        <section id="project-news" class="project-gallery gallery-js-ready autorotation-disabled">
+            <div class="holder">
+                <a class="gallery-btn btn-prev" href="#"><span>Влево</span></a>
+                <a class="gallery-btn btn-prev gl-m-l" href="#"></a>
+                <ul class="slideset">
+                    <li class="">
+                        <img src="assets/images/eurostancom_comment_verst-01.jpg" alt="">
+                    </li>
+
+                    <li class="active">
+                        <img src="assets/images/eurostancom_comment_verst-02.jpg" alt="">
+                    </li>
+
+                    <li class="">
+                        <img src="assets/images/eurostancom_comment_verst-03.jpg" alt="">
+                    </li>
+
+                    <li class="">
+                        <img src="assets/images/eurostancom_comment_verst-04.jpg" alt="">
+                    </li>
+                </ul>
+                <a class="gallery-btn btn-next" href="#"><span>Вправо</span></a>
+                <a class="gallery-btn btn-next gl-m-r" href="#"></a>
+            </div>
+        </section>
+    </div>
+</div>
+
+//= templates/page-template-close.html

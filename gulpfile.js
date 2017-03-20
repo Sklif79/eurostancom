@@ -3,7 +3,7 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
     pngquant = require('imagemin-pngquant'),
-    // imagemin = require('gulp-imagemin'),
+    imagemin = require('gulp-imagemin'),
     rigger = require('gulp-rigger'),
     rimraf = require('rimraf'),
     // sourcemaps = require('gulp-sourcemaps'),
@@ -112,12 +112,12 @@ gulp.task('style:build', function () {
 
 gulp.task('image:build', function () {
     gulp.src(path.src.img)
-        // .pipe(imagemin({
-        //     progressive: true,
-        //     svgoPlugins: [{removeViewBox: false}],
-        //     use: [pngquant()],
-        //     interlaced: true
-        // }))
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()],
+            interlaced: true
+        }))
         .pipe(gulp.dest(path.build.img))
         .pipe(reload({stream: true}));
 });
@@ -134,7 +134,7 @@ gulp.task('build', [
     'js:build',
     'style:build',
     'fonts:build',
-    'image:build',
+    'image:build'
     // 'audio:build',
     // 'video:build'
 ]);

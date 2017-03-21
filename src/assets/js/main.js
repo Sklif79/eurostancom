@@ -88,6 +88,30 @@ $(document).ready(function () {
         pager: false
     });
 
+    if ($(window).width() <= 1370) {
+        $('.certificates-slider').bxSlider({
+            infiniteLoop: true,
+            minSlides: 1,
+            maxSlides: 5,
+            moveSlides: 1,
+            slideMargin: 15,
+            slideWidth: 180,
+            controls: false
+        });
+
+        $('.partners-slider').bxSlider({
+            infiniteLoop: false,
+            pager: false,
+            minSlides: 1,
+            maxSlides: 4,
+            moveSlides: 1,
+            slideMargin: 40,
+            slideWidth: 165,
+            controls: false
+
+        });
+    }
+
 
     if ($(window).width() <= 1300) {
         //cвайп
@@ -102,16 +126,126 @@ $(document).ready(function () {
         $(".btn-close-aside").on("click", function () {
             closeSwipe();
         });
-
-
-        // var start_pos = $('.aside').offset().top;
-        // $(window).scroll(function () {
-        //     if ($(window).scrollTop() >= start_pos) {
-        //         if ($('.aside').hasClass() == false) $('.aside').addClass('to_top');
-        //     }
-        //     else $('.aside').removeClass('to_top');
-        // });
     }
+
+
+    if ($(window).width() <= 1040) {
+        $('.certificates-slider').bxSlider({
+            infiniteLoop: true,
+            minSlides: 1,
+            maxSlides: 4,
+            moveSlides: 1,
+            slideMargin: 40,
+            slideWidth: 180,
+            controls: false
+        });
+    }
+
+    if ($(window).width() <= 780) {
+        $('.certificates-slider').bxSlider({
+            infiniteLoop: true,
+            minSlides: 1,
+            maxSlides: 3,
+            moveSlides: 1,
+            slideMargin: 30,
+            slideWidth: 180,
+            controls: false
+        });
+
+        $('.partners-slider').bxSlider({
+            infiniteLoop: false,
+            pager: false,
+            minSlides: 3,
+            maxSlides: 3,
+            moveSlides: 1,
+            slideMargin: 40,
+            slideWidth: 155,
+            controls: false
+
+        });
+
+        $('.about-slider').bxSlider({
+            pagerCustom: '#about-slider-pager',
+            slideMargin: 15,
+            controls: false,
+            minSlides: 1,
+            maxSlides: 1,
+        });
+
+        $('.slider-pager').bxSlider({
+            infiniteLoop: false,
+            pager: false,
+            minSlides: 3,
+            maxSlides: 7,
+            moveSlides: 1,
+            controls: false,
+            slideMargin: 5,
+            slideWidth: 70,
+            nextSelector: '#pager-control_right',
+            prevSelector: '#pager-control_left',
+            nextText: '',
+            prevText: ''
+        });
+
+
+    }
+
+    if ($(window).width() <= 340) {
+        $('.certificates-slider').bxSlider({
+            infiniteLoop: true,
+            minSlides: 1,
+            maxSlides: 1,
+            moveSlides: 1,
+            slideMargin: 10,
+            // slideWidth: 180,
+            controls: false
+        });
+
+        $('.partners-slider').bxSlider({
+            infiniteLoop: false,
+            pager: false,
+            minSlides: 1,
+            maxSlides: 1,
+            moveSlides: 1,
+            slideMargin: 40,
+            slideWidth: 155,
+            controls: false
+
+        });
+
+        $('.about-slider').bxSlider({
+            pagerCustom: '#about-slider-pager',
+            slideMargin: 15,
+            controls: false,
+            minSlides: 1,
+            maxSlides: 1,
+        });
+
+        $('.slider-pager').bxSlider({
+            infiniteLoop: false,
+            pager: false,
+            minSlides: 3,
+            maxSlides: 3,
+            moveSlides: 1,
+            controls: false,
+            slideMargin: 5,
+            slideWidth: 60,
+            nextSelector: '#pager-control_right',
+            prevSelector: '#pager-control_left',
+            nextText: '',
+            prevText: ''
+        });
+
+
+
+
+    }
+
+
+
+
+
+
 
     function toggleTranscript () {
         var el = $(".index-nav-category__nav");
@@ -135,14 +269,21 @@ $(document).ready(function () {
     customInputFile();
 
 
-//мобильное меню
-    $(".mobile-header__burger").on("click", function () {
+//мобильное меню с сокрытием при клике вне области или по иконке х
+    $(".mobile-header__burger").click(function() {
         $(".mobile-nav").toggleClass("active");
+    });
+    $(document).on('click', function(e) {
+        if (!$(e.target).closest(".mobile-header__burger").length) {
+            $(".mobile-nav").removeClass("active");
+        }
+        e.stopPropagation();
     });
 
     $(".btn-close").on("click", function () {
         $(".mobile-nav").removeClass("active");
     });
+
 
 
     $('.popup-overlay').height(

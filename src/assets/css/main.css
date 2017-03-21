@@ -114,9 +114,6 @@ body {
 }
 
 .container * {
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
 
@@ -130,7 +127,7 @@ body {
 
 .main__content {
     margin-bottom: 40px;
-    min-height: 350px;
+    min-height: 413px;
 }
 
 .ui-loader {
@@ -143,6 +140,7 @@ body {
     width: 320px;
     background-color: #4f535c;
     min-height: 100vh;
+    -ms-flex-negative: 0;
     flex-shrink: 0;
 }
 
@@ -245,7 +243,7 @@ body {
     font-weight: 700;
     text-align: center;
     line-height: 0.8;
-    padding: 13px 30px 9px 30px;
+    padding: 13px 30px 11px 30px;
     cursor: pointer;
 }
 
@@ -274,6 +272,7 @@ body {
 }
 
 .content {
+    -ms-flex-positive: 1;
     flex-grow: 1;
     background-color: #ededed;
 }
@@ -284,10 +283,12 @@ body {
     text-transform: uppercase;
     padding-left: 0;
     padding-right: 15px;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
 .index-nav-category .aside-nav_mobile {
+    -ms-flex-pack:start;
     justify-content:flex-start;
 }
 
@@ -619,7 +620,7 @@ body {
     font-size: 14px;
     display: none;
     padding: 1px 0 0 25px;
-    background: url("../images/header-top-email.png") no-repeat left center;
+    background: url("../images/header-top-email.png") no-repeat left 47%;
     margin-right: 38px;
 }
 
@@ -630,6 +631,7 @@ body {
 }
 
 .header-bottom .container.flex_row.flex_start  {
+    -ms-flex-pack: justify!important;
     justify-content: space-between!important;
 }
 
@@ -702,17 +704,13 @@ body {
     border-top: 4px solid #fbca0b;
     padding: 35px 0 20px 0;
     background: rgba(113, 120, 133, 1);
-    background: -moz-linear-gradient(top, rgba(113, 120, 133, 1) 0%, rgba(79, 83, 92, 1) 100%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(113, 120, 133, 1)), color-stop(100%, rgba(79, 83, 92, 1)));
-    background: -webkit-linear-gradient(top, rgba(113, 120, 133, 1) 0%, rgba(79, 83, 92, 1) 100%);
-    background: -o-linear-gradient(top, rgba(113, 120, 133, 1) 0%, rgba(79, 83, 92, 1) 100%);
-    background: -ms-linear-gradient(top, rgba(113, 120, 133, 1) 0%, rgba(79, 83, 92, 1) 100%);
     background: linear-gradient(to bottom, rgba(113, 120, 133, 1) 0%, rgba(79, 83, 92, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#717885', endColorstr='#4f535c', GradientType=0);
 }
 
 .footer-inner {
-    padding: 0 15px 0 25px;
+    padding: 0 0 0 25px;
 }
 
 .footer__logo {
@@ -765,6 +763,11 @@ body {
     line-height: 1.2;
 }
 
+
+.footer .container {
+    padding-right: 0;
+}
+
 /************************* bread-crumbs *************************/
 
 .bread-crumbs {
@@ -801,7 +804,7 @@ a.bread-crumbs__item-text {
     width: 6px;
     height: 9px;
     position: absolute;
-    top: 0;
+    top: 3px;
     right: -21px;
     background: url("../images/breadcrumbs-arrow.png") no-repeat center;
 }
@@ -896,11 +899,7 @@ a.bread-crumbs__item-text {
     right: 19px;
 
     background: rgba(255, 255, 255, 0);
-    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(218, 219, 219, 0.55) 40%, rgba(218, 219, 219, 1) 100%);
     background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(40%, rgba(218, 219, 219, 0.55)), color-stop(100%, rgba(218, 219, 219, 1)));
-    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(218, 219, 219, 0.55) 40%, rgba(218, 219, 219, 1) 100%);
-    background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(218, 219, 219, 0.55) 40%, rgba(218, 219, 219, 1) 100%);
-    background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(218, 219, 219, 0.55) 40%, rgba(218, 219, 219, 1) 100%);
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(218, 219, 219, 0.55) 40%, rgba(218, 219, 219, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dadbdb', GradientType=1);
 }
@@ -909,11 +908,7 @@ a.bread-crumbs__item-text {
     left: 20px;
 
     background: rgba(218, 219, 219, 1);
-    background: -moz-linear-gradient(left, rgba(218, 219, 219, 1) 0%, rgba(218, 219, 219, 0.55) 60%, rgba(255, 255, 255, 0) 100%);
     background: -webkit-gradient(left top, right top, color-stop(0%, rgba(218, 219, 219, 1)), color-stop(60%, rgba(218, 219, 219, 0.55)), color-stop(100%, rgba(255, 255, 255, 0)));
-    background: -webkit-linear-gradient(left, rgba(218, 219, 219, 1) 0%, rgba(218, 219, 219, 0.55) 60%, rgba(255, 255, 255, 0) 100%);
-    background: -o-linear-gradient(left, rgba(218, 219, 219, 1) 0%, rgba(218, 219, 219, 0.55) 60%, rgba(255, 255, 255, 0) 100%);
-    background: -ms-linear-gradient(left, rgba(218, 219, 219, 1) 0%, rgba(218, 219, 219, 0.55) 60%, rgba(255, 255, 255, 0) 100%);
     background: linear-gradient(to right, rgba(218, 219, 219, 1) 0%, rgba(218, 219, 219, 0.55) 60%, rgba(255, 255, 255, 0) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dadbdb', endColorstr='#ffffff', GradientType=1);
 }
@@ -952,7 +947,9 @@ a.bread-crumbs__item-text {
 .advantages {
     padding: 25px 25px 0 25px;
     margin-bottom: 45px;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
 }
 
@@ -973,6 +970,7 @@ a.bread-crumbs__item-text {
 }
 
 .advantage-image__inner.flex_row {
+    -ms-flex-pack: distribute;
     justify-content: space-around;
 }
 
@@ -1033,14 +1031,18 @@ a.bread-crumbs__item-text {
 }
 
 .advantage-wrap-first-line {
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
     width: 60%;
 }
 
 .advantage-wrap-second-line {
+    display: -ms-flexbox;
     display: flex;
     width: 40%;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
 }
 
@@ -1086,8 +1088,6 @@ a.bread-crumbs__item-text {
 
 .certificates-slide-img {
     height: 250px;
-    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -1126,9 +1126,6 @@ a.bread-crumbs__item-text {
     bottom: 8px;
     left: 0;
     width: 100%;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
 
@@ -1332,11 +1329,13 @@ a.bread-crumbs__item-text {
 }
 
 .catalog-horizontal .catalog-horizontal__item:nth-child(even) .catalog-horizontal-text {
+    -ms-flex-order: 2;
     order: 2;
     padding-right: 40px;
 }
 
 .catalog-horizontal .catalog-horizontal__item:nth-child(even) .catalog-horizontal-image-wrap {
+    -ms-flex-order: 1;
     order: 1;
 }
 
@@ -1352,11 +1351,7 @@ a.bread-crumbs__item-text {
     left: -6%px;
 
     background: rgba(121, 129, 142, 1);
-    background: -moz-linear-gradient(left, rgba(121, 129, 142, 1) 0%, rgba(148, 155, 165, 1) 50%, rgba(151, 158, 168, 0) 95%, rgba(151, 158, 168, 0) 100%);
     background: -webkit-gradient(left top, right top, color-stop(0%, rgba(121, 129, 142, 1)), color-stop(50%, rgba(148, 155, 165, 1)), color-stop(95%, rgba(151, 158, 168, 0)), color-stop(100%, rgba(151, 158, 168, 0)));
-    background: -webkit-linear-gradient(left, rgba(121, 129, 142, 1) 0%, rgba(148, 155, 165, 1) 50%, rgba(151, 158, 168, 0) 95%, rgba(151, 158, 168, 0) 100%);
-    background: -o-linear-gradient(left, rgba(121, 129, 142, 1) 0%, rgba(148, 155, 165, 1) 50%, rgba(151, 158, 168, 0) 95%, rgba(151, 158, 168, 0) 100%);
-    background: -ms-linear-gradient(left, rgba(121, 129, 142, 1) 0%, rgba(148, 155, 165, 1) 50%, rgba(151, 158, 168, 0) 95%, rgba(151, 158, 168, 0) 100%);
     background: linear-gradient(to right, rgba(121, 129, 142, 1) 0%, rgba(148, 155, 165, 1) 50%, rgba(151, 158, 168, 0) 95%, rgba(151, 158, 168, 0) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#79818e', endColorstr='#979ea8', GradientType=1);
 }
@@ -1365,11 +1360,7 @@ a.bread-crumbs__item-text {
     right: -6%;
 
     background: rgba(151, 158, 168, 0);
-    background: -moz-linear-gradient(left, rgba(151, 158, 168, 0) 0%, rgba(151, 158, 168, 0) 5%, rgba(148, 155, 165, 1) 50%, rgba(121, 129, 142, 1) 100%);
     background: -webkit-gradient(left top, right top, color-stop(0%, rgba(151, 158, 168, 0)), color-stop(5%, rgba(151, 158, 168, 0)), color-stop(50%, rgba(148, 155, 165, 1)), color-stop(100%, rgba(121, 129, 142, 1)));
-    background: -webkit-linear-gradient(left, rgba(151, 158, 168, 0) 0%, rgba(151, 158, 168, 0) 5%, rgba(148, 155, 165, 1) 50%, rgba(121, 129, 142, 1) 100%);
-    background: -o-linear-gradient(left, rgba(151, 158, 168, 0) 0%, rgba(151, 158, 168, 0) 5%, rgba(148, 155, 165, 1) 50%, rgba(121, 129, 142, 1) 100%);
-    background: -ms-linear-gradient(left, rgba(151, 158, 168, 0) 0%, rgba(151, 158, 168, 0) 5%, rgba(148, 155, 165, 1) 50%, rgba(121, 129, 142, 1) 100%);
     background: linear-gradient(to right, rgba(151, 158, 168, 0) 0%, rgba(151, 158, 168, 0) 5%, rgba(148, 155, 165, 1) 50%, rgba(121, 129, 142, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#979ea8', endColorstr='#79818e', GradientType=1);
 }
@@ -1437,10 +1428,6 @@ a.bread-crumbs__item-text {
     bottom: 0;
     left: 0;
     background-color: #8a909c;
-
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
 
@@ -1629,36 +1616,20 @@ a.bread-crumbs__item-text {
 
 .news-item__preview-text {
     ill-change: transform;
-    -webkit-transition: -webkit-transform .5s cubic-bezier(.19, 1, .22, 1);
-    -moz-transition: -moz-transform .5s cubic-bezier(.19, 1, .22, 1);
-    -o-transition: -o-transform .5s cubic-bezier(.19, 1, .22, 1);
-    -ms-transition: -ms-transform .5s cubic-bezier(.19, 1, .22, 1);
     transition: transform .5s cubic-bezier(.19, 1, .22, 1);
 }
 
 .news-item__title {
     will-change: color, transform;
-    -webkit-transition: color .5s cubic-bezier(.19, 1, .22, 1), -webkit-transform .5s cubic-bezier(.19, 1, .22, 1);
-    -moz-transition: color .5s cubic-bezier(.19, 1, .22, 1), -moz-transform .5s cubic-bezier(.19, 1, .22, 1);
-    -o-transition: color .5s cubic-bezier(.19, 1, .22, 1), -o-transform .5s cubic-bezier(.19, 1, .22, 1);
-    -ms-transition: color .5s cubic-bezier(.19, 1, .22, 1), -ms-transform .5s cubic-bezier(.19, 1, .22, 1);
     transition: color .5s cubic-bezier(.19, 1, .22, 1), transform .5s cubic-bezier(.19, 1, .22, 1);
 }
 
 .news-item:hover .news-item__title {
     color: #6f6f6f;
-    -webkit-transform: translateY(-3px);
-    -moz-transform: translateY(-3px);
-    -o-transform: translateY(-3px);
-    -ms-transform: translateY(-3px);
     transform: translateY(-3px);
 }
 
 .news-item:hover .news-item__preview-text {
-    -webkit-transform: translateY(-4px);
-    -moz-transform: translateY(-4px);
-    -o-transform: translateY(-4px);
-    -ms-transform: translateY(-4px);
     transform: translateY(-4px);
 }
 
@@ -1702,6 +1673,7 @@ a.bread-crumbs__item-text {
 .news-grid__item {
     padding-right: 30px;
     margin-bottom: 55px;
+    -ms-flex-align: start;
     align-items: flex-start;
     height: 350px;
     position: relative;
@@ -1763,10 +1735,6 @@ a.bread-crumbs__item-text {
 
 .project-gallery .btn-prev,
 .project-gallery .btn-next {
-    -webkit-transition: background .5s ease, opacity .25s ease;
-    -moz-transition: background .5s ease, opacity .25s ease;
-    -ms-transition: background .5s ease, opacity .25s ease;
-    -o-transition: background .5s ease, opacity .25s ease;
     transition: background .5s ease, opacity .25s ease;
     position: absolute;
     background: rgba(79, 83, 92, .8);
@@ -1860,6 +1828,7 @@ a.bread-crumbs__item-text {
 
 /************************* contact *************************/
 .contact.flex_row {
+    -ms-flex-align: stretch;
     align-items: stretch;
 }
 
@@ -1877,7 +1846,9 @@ a.bread-crumbs__item-text {
 
 .contact__map-wrap {
     transition: 0s;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-positive: 1;
     flex-grow: 1;
     width: auto;
 }
@@ -1893,6 +1864,7 @@ ymaps.controller {
 }
 
 .contact {
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -1900,7 +1872,9 @@ ymaps.controller {
     width: 421px;
     background-color: #fff;
     padding: 25px 30px;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-preferred-size: 421px;
     flex-basis: 421px;
 
 }
@@ -1991,8 +1965,11 @@ ymaps.controller {
 .contact-section {
     margin-top: 42px;
     padding-bottom: 10px;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -ms-flex-align: end;
     align-items: flex-end;
 }
 
@@ -2133,8 +2110,11 @@ ymaps.controller {
     height: 240px;
     width: 541px;
     text-align: center;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -2144,8 +2124,11 @@ ymaps.controller {
     height: 240px;
     width: 541px;
     text-align: center;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -2182,17 +2165,15 @@ ymaps.controller {
 
 /************************* progects *************************/
 .progects-line {
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
 .progects-item {
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     min-height: 260px;
@@ -2222,10 +2203,6 @@ ymaps.controller {
     -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: alpha(opacity=100);
     opacity: 1;
-    -webkit-transition-delay: 0.5s;
-    -moz-transition-delay: 0.5s;
-    -o-transition-delay: 0.5s;
-    -ms-transition-delay: 0.5s;
     transition-delay: 0.5s;
 }
 
@@ -2233,10 +2210,6 @@ ymaps.controller {
     -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
     opacity: 0;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
 
@@ -2249,31 +2222,15 @@ ymaps.controller {
     -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: alpha(opacity=100);
     opacity: 1;
-    -webkit-transform: scale(1) rotate(0deg);
-    -moz-transform: scale(1) rotate(0deg);
-    -o-transform: scale(1) rotate(0deg);
-    -ms-transform: scale(1) rotate(0deg);
     transform: scale(1) rotate(0deg);
-    -webkit-transition-delay: 0.2s;
-    -moz-transition-delay: 0.2s;
-    -o-transition-delay: 0.2s;
-    -ms-transition-delay: 0.2s;
     transition-delay: 0.2s;
 }
 
 .progects-item:hover .progects-wrapper__inner {
-    -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -o-transform: scale(0);
-    -ms-transform: scale(0);
     transform: scale(0);
     -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
     opacity: 0;
-    -webkit-transition-delay: 0s;
-    -moz-transition-delay: 0s;
-    -o-transition-delay: 0s;
-    -ms-transition-delay: 0s;
     transition-delay: 0s;
 }
 
@@ -2287,15 +2244,7 @@ ymaps.controller {
     -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
     opacity: 0;
-    -webkit-transform: scale(0) rotate(-180deg);
-    -moz-transform: scale(0) rotate(-180deg);
-    -o-transform: scale(0) rotate(-180deg);
-    -ms-transform: scale(0) rotate(-180deg);
     transform: scale(0) rotate(-180deg);
-    -webkit-transition: all 0.4s ease-in;
-    -moz-transition: all 0.4s ease-in;
-    -o-transition: all 0.4s ease-in;
-    -ms-transition: all 0.4s ease-in;
     transition: all 0.4s ease-in;
 }
 
@@ -2325,10 +2274,6 @@ ymaps.controller {
     -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
     opacity: 0;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
 
@@ -2354,10 +2299,6 @@ ymaps.controller {
     -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
     opacity: 0;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
 
@@ -2366,10 +2307,6 @@ ymaps.controller {
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
     background-color: #fff;
     min-height: 260px;
-    -webkit-transition: all 0.4s ease-in-out 0.2s;
-    -moz-transition: all 0.4s ease-in-out 0.2s;
-    -o-transition: all 0.4s ease-in-out 0.2s;
-    -ms-transition: all 0.4s ease-in-out 0.2s;
     transition: all 0.4s ease-in-out 0.2s;
     -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: alpha(opacity=100);
@@ -2388,10 +2325,6 @@ ymaps.controller {
     -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: alpha(opacity=1);
     opacity: 1;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
 
@@ -2503,9 +2436,6 @@ ymaps.controller {
     bottom: 0;
     left: 0;
     width: 100%;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
 

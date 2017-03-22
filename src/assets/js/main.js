@@ -1,124 +1,412 @@
 $(document).ready(function () {
-
-    $('.about-slider').bxSlider({
-        pagerCustom: '#about-slider-pager',
-        slideMargin: 15
-    });
-
-    $('.slider-pager').bxSlider({
-        infiniteLoop: false,
-        pager: false,
-        minSlides: 1,
-        maxSlides: 10,
-        moveSlides: 1,
-        slideMargin: 5,
-        slideWidth: 80,
-        nextSelector: '#pager-control_right',
-        prevSelector: '#pager-control_left',
-        nextText: '',
-        prevText: ''
-    });
-
-
-    $('.certificates-slider').bxSlider({
-        infiniteLoop: true,
-        minSlides: 1,
-        maxSlides: 6,
-        moveSlides: 1,
-        slideMargin: 15,
-        slideWidth: 180
-    });
-
-    $('.partners-slider').bxSlider({
-        infiniteLoop: true,
-        pager: false,
-        minSlides: 1,
-        maxSlides: 6,
-        moveSlides: 1,
-        slideMargin: 40,
-        slideWidth: 165
-    });
-    $('.partners-slider-index').bxSlider({
-        infiniteLoop: true,
-        pager: false,
-        minSlides: 6,
-        maxSlides: 6,
-        moveSlides: 1,
-        slideMargin: 60,
-        slideWidth: 165
-    });
-    $('#project-gallery').scrollGallery({
-        mask: '.holder',
-        slider: '.slideset',
-        slides: 'li',
-        btnPrev: 'a.btn-prev',
-        btnNext: 'a.btn-next',
-        circularRotation: false,
-        autoRotation: false,
-        switchTime: 3000,
-        animSpeed: 500
-    });
-
-    $('#project-news').scrollGallery({
-        mask: '.holder',
-        slider: '.slideset',
-        slides: 'li',
-        btnPrev: 'a.btn-prev',
-        btnNext: 'a.btn-next',
-        circularRotation: false,
-        autoRotation: false,
-        switchTime: 3000,
-        animSpeed: 500
-    });
-    $('.catalogs-slider').bxSlider({
-        infiniteLoop: true,
-        minSlides: 1,
-        maxSlides: 1,
-        moveSlides: 1,
-        slideMargin: 5,
-        slideWidth: 226,
-        pager: false
-    });
-
-    $('.review-slider').bxSlider({
-        infiniteLoop: true,
-        minSlides: 4,
-        maxSlides: 4,
-        // controls: false,
-        moveSlides: 1,
-        slideWidth: 300,
-        pager: false
-    });
-
-    if ($(window).width() <= 1370) {
-        $('.about-slider').bxSlider({
-            pagerCustom: '#about-slider-pager',
-            slideMargin: 15,
-            adaptiveHeight: true,
-            controls: false
-        });
-        $('.certificates-slider').bxSlider({
+    if (device.ios()) {
+        $('.review-slider').bxSlider({
             infiniteLoop: true,
             minSlides: 1,
-            maxSlides: 5,
+            maxSlides: 1,
             moveSlides: 1,
-            slideMargin: 5,
-            slideWidth: 180,
-            controls: false
+            controls: true,
+            // adaptiveHeight: true,
+            pager: false
         });
 
         $('.partners-slider').bxSlider({
+            infiniteLoop: true,
+            pager: false,
+            minSlides: 1,
+            maxSlides: 1,
+            moveSlides: 1,
+        });
+
+        $('.partners-slider').addClass('ios-partners-slider-wrap');
+///++++
+        $('.partners-slider-index').bxSlider({
+            infiniteLoop: true,
+            pager: false,
+            minSlides: 1,
+            maxSlides: 1,
+            moveSlides: 1,
+            // slideMargin: 60,
+            // slideWidth: 165
+        });
+
+        $('.certificates-slider').bxSlider({
+            infiniteLoop: true,
+            minSlides: 1,
+            maxSlides: 1,
+            moveSlides: 1,
+            slideMargin: 10000,
+            slideWidth: 180,
+            // controls: false
+        });
+////+++++
+        $('.about-slider').bxSlider({
+            pagerCustom: '#about-slider-pager',
+            slideMargin: 15
+        });
+
+        $('.slider-pager').bxSlider({
+            infiniteLoop: false,
+            pager: false,
+            minSlides: 3,
+            maxSlides: 3,
+            moveSlides: 1,
+            controls: false,
+            slideMargin: 12,
+            slideWidth: 60,
+            // nextSelector: '#pager-control_right',
+            // prevSelector: '#pager-control_left',
+            // nextText: '',
+            // prevText: ''
+        });
+    }
+
+    if (!device.ios()) {
+        $('.about-slider').bxSlider({
+            pagerCustom: '#about-slider-pager',
+            slideMargin: 15
+        });
+
+        $('.slider-pager').bxSlider({
             infiniteLoop: false,
             pager: false,
             minSlides: 1,
-            maxSlides: 4,
+            maxSlides: 10,
+            moveSlides: 1,
+            slideMargin: 5,
+            slideWidth: 80,
+            nextSelector: '#pager-control_right',
+            prevSelector: '#pager-control_left',
+            nextText: '',
+            prevText: ''
+        });
+
+
+        $('.certificates-slider').bxSlider({
+            infiniteLoop: true,
+            minSlides: 1,
+            maxSlides: 6,
+            moveSlides: 1,
+            slideMargin: 15,
+            slideWidth: 180
+        });
+
+        $('.partners-slider').bxSlider({
+            infiniteLoop: true,
+            pager: false,
+            minSlides: 1,
+            maxSlides: 6,
             moveSlides: 1,
             slideMargin: 40,
-            slideWidth: 165,
-            controls: false
-
+            slideWidth: 165
         });
+
+        $('.partners-slider-index').bxSlider({
+            infiniteLoop: true,
+            pager: false,
+            minSlides: 6,
+            maxSlides: 6,
+            moveSlides: 1,
+            slideMargin: 60,
+            slideWidth: 165
+        });
+
+        $('#project-gallery').scrollGallery({
+            mask: '.holder',
+            slider: '.slideset',
+            slides: 'li',
+            btnPrev: 'a.btn-prev',
+            btnNext: 'a.btn-next',
+            circularRotation: false,
+            autoRotation: false,
+            switchTime: 3000,
+            animSpeed: 500
+        });
+
+        $('#project-news').scrollGallery({
+            mask: '.holder',
+            slider: '.slideset',
+            slides: 'li',
+            btnPrev: 'a.btn-prev',
+            btnNext: 'a.btn-next',
+            circularRotation: false,
+            autoRotation: false,
+            switchTime: 3000,
+            animSpeed: 500
+        });
+        $('.catalogs-slider').bxSlider({
+            infiniteLoop: true,
+            minSlides: 1,
+            maxSlides: 1,
+            moveSlides: 1,
+            slideMargin: 5,
+            slideWidth: 226,
+            pager: false
+        });
+
+        $('.review-slider').bxSlider({
+            infiniteLoop: true,
+            minSlides: 4,
+            maxSlides: 4,
+            // controls: false,
+            moveSlides: 1,
+            slideWidth: 300,
+            pager: false,
+            controls: true
+        });
+
+
+
+        if ($(window).width() <= 1370) {
+            $('.about-slider').bxSlider({
+                pagerCustom: '#about-slider-pager',
+                slideMargin: 15,
+                adaptiveHeight: true,
+                controls: false
+            });
+            $('.certificates-slider').bxSlider({
+                infiniteLoop: true,
+                minSlides: 1,
+                maxSlides: 5,
+                moveSlides: 1,
+                slideMargin: 5,
+                slideWidth: 180,
+                controls: false
+            });
+
+
+            $('.partners-slider').bxSlider({
+                infiniteLoop: false,
+                pager: false,
+                minSlides: 1,
+                maxSlides: 4,
+                moveSlides: 1,
+                slideMargin: 40,
+                slideWidth: 165,
+                controls: false
+            });
+
+        }
+
+        if ($(window).width() <= 1300) {
+            //cвайп
+            $(".aside").on("swiperight", function () {
+                openSwipe();
+            });
+
+            $(".aside").on("swipeleft", function () {
+                closeSwipe();
+            });
+
+            $(".btn-close-aside").on("click", function () {
+                closeSwipe();
+            });
+        }
+
+        if ($(window).width() <= 1040) {
+            $('.certificates-slider').bxSlider({
+                infiniteLoop: true,
+                minSlides: 1,
+                maxSlides: 4,
+                moveSlides: 1,
+                slideMargin: 40,
+                slideWidth: 180,
+                controls: false
+            });
+
+            $('.review-slider').bxSlider({
+                infiniteLoop: true,
+                minSlides: 2,
+                maxSlides: 2,
+                controls: false,
+                moveSlides: 1,
+                slideWidth: 300,
+                pager: false
+            });
+
+            $('.partners-slider-index').bxSlider({
+                infiniteLoop: true,
+                pager: false,
+                minSlides: 5,
+                maxSlides: 5,
+                moveSlides: 1,
+                slideMargin: 60,
+                slideWidth: 165
+            });
+        }
+
+
+        if ($(window).width() <= 780) {
+            $('.certificates-slider').bxSlider({
+                infiniteLoop: true,
+                minSlides: 1,
+                maxSlides: 3,
+                moveSlides: 1,
+                slideMargin: 30,
+                slideWidth: 180,
+                controls: false
+            });
+
+            $('.partners-slider-index').bxSlider({
+                infiniteLoop: true,
+                pager: false,
+                minSlides: 3,
+                maxSlides: 3,
+                moveSlides: 1,
+                slideMargin: 60,
+                slideWidth: 165
+            });
+
+
+            $('.review-slider').bxSlider({
+                infiniteLoop: true,
+                minSlides: 1,
+                maxSlides: 1,
+                moveSlides: 1,
+                controls: false,
+                // adaptiveHeight: true,
+                pager: false
+            });
+
+
+            $('.partners-slider').bxSlider({
+                infiniteLoop: false,
+                pager: false,
+                minSlides: 3,
+                maxSlides: 3,
+                moveSlides: 1,
+                slideMargin: 40,
+                slideWidth: 155,
+                controls: false
+
+            });
+
+
+            $('.about-slider').bxSlider({
+                pagerCustom: '#about-slider-pager',
+                minSlides: 1,
+                maxSlides: 1,
+                slideMargin: 15,
+                adaptiveHeight: true,
+                controls: false
+            });
+
+
+            $('.slider-pager').bxSlider({
+                infiniteLoop: false,
+                pager: false,
+                minSlides: 3,
+                maxSlides: 7,
+                moveSlides: 1,
+                controls: false,
+                slideMargin: 5,
+                slideWidth: 70,
+                nextSelector: '#pager-control_right',
+                prevSelector: '#pager-control_left',
+                nextText: '',
+                prevText: ''
+            });
+        }
+
+        if ($(window).width() <= 600) {
+            $('.certificates-slider').bxSlider({
+                infiniteLoop: true,
+                minSlides: 2,
+                maxSlides: 2,
+                moveSlides: 1,
+                slideMargin: 10,
+                slideWidth: 180,
+                controls: false
+            });
+
+            $('.partners-slider').bxSlider({
+                infiniteLoop: false,
+                pager: false,
+                minSlides: 2,
+                maxSlides: 2,
+                moveSlides: 1,
+                slideMargin: 40,
+                slideWidth: 155,
+                controls: false
+
+            });
+
+            $('.about-slider').bxSlider({
+                pagerCustom: '#about-slider-pager',
+                slideMargin: 15,
+                controls: false,
+                minSlides: 1,
+                maxSlides: 1
+            });
+
+            $('.slider-pager').bxSlider({
+                infiniteLoop: false,
+                pager: false,
+                minSlides: 4,
+                maxSlides: 6,
+                moveSlides: 1,
+                controls: false,
+                slideMargin: 12,
+                slideWidth: 60,
+                nextSelector: '#pager-control_right',
+                prevSelector: '#pager-control_left',
+                nextText: '',
+                prevText: ''
+            });
+        }
+
+        if ($(window).width() <= 340) {
+
+
+            $('.certificates-slider').bxSlider({
+                infiniteLoop: true,
+                minSlides: 1,
+                maxSlides: 1,
+                moveSlides: 1,
+                slideMargin: 40,
+                slideWidth: 180,
+                controls: false
+            });
+            $('.partners-slider-index').bxSlider({
+                infiniteLoop: true,
+                pager: false,
+                minSlides: 1,
+                maxSlides: 1,
+                moveSlides: 1,
+                slideMargin: 60,
+                slideWidth: 165
+            });
+
+            $('.partners-slider').bxSlider({
+                infiniteLoop: false,
+                pager: false,
+                minSlides: 1,
+                maxSlides: 1,
+                moveSlides: 1,
+                slideMargin: 40,
+                slideWidth: 155,
+                controls: false
+            });
+
+            $('.slider-pager').bxSlider({
+                infiniteLoop: false,
+                pager: false,
+                minSlides: 3,
+                maxSlides: 3,
+                moveSlides: 1,
+                controls: false,
+                slideMargin: 5,
+                slideWidth: 60,
+                nextSelector: '#pager-control_right',
+                prevSelector: '#pager-control_left',
+                nextText: '',
+                prevText: ''
+            });
+
+        }
+
     }
+
 
 
     if ($(window).width() <= 1300) {
@@ -134,210 +422,6 @@ $(document).ready(function () {
         $(".btn-close-aside").on("click", function () {
             closeSwipe();
         });
-    }
-
-
-    if ($(window).width() <= 1040) {
-        $('.certificates-slider').bxSlider({
-            infiniteLoop: true,
-            minSlides: 1,
-            maxSlides: 4,
-            moveSlides: 1,
-            slideMargin: 40,
-            slideWidth: 180,
-            controls: false
-        });
-
-        $('.review-slider').bxSlider({
-            infiniteLoop: true,
-            minSlides: 2,
-            maxSlides: 2,
-            controls: false,
-            moveSlides: 1,
-            slideWidth: 300,
-            pager: false
-        });
-
-        $('.partners-slider-index').bxSlider({
-            infiniteLoop: true,
-            pager: false,
-            minSlides: 5,
-            maxSlides: 5,
-            moveSlides: 1,
-            slideMargin: 60,
-            slideWidth: 165
-        });
-    }
-
-    if ($(window).width() <= 780) {
-        $('.certificates-slider').bxSlider({
-            infiniteLoop: true,
-            minSlides: 1,
-            maxSlides: 3,
-            moveSlides: 1,
-            slideMargin: 30,
-            slideWidth: 180,
-            controls: false
-        });
-
-        $('.partners-slider-index').bxSlider({
-            infiniteLoop: true,
-            pager: false,
-            minSlides: 3,
-            maxSlides: 3,
-            moveSlides: 1,
-            slideMargin: 60,
-            slideWidth: 165
-        });
-
-        $('.review-slider').bxSlider({
-            infiniteLoop: true,
-            minSlides: 1,
-            maxSlides: 1,
-            moveSlides: 1,
-            controls: false,
-            // slideWidth: 300,
-            adaptiveHeight: true,
-            pager: false
-        });
-
-        $('.partners-slider').bxSlider({
-            infiniteLoop: false,
-            pager: false,
-            minSlides: 3,
-            maxSlides: 3,
-            moveSlides: 1,
-            slideMargin: 40,
-            slideWidth: 155,
-            controls: false
-
-        });
-
-
-
-        $('.about-slider').bxSlider({
-            pagerCustom: '#about-slider-pager',
-            minSlides: 1,
-            maxSlides: 1,
-            slideMargin: 15,
-            adaptiveHeight: true,
-            controls: false
-        });
-
-
-
-        $('.slider-pager').bxSlider({
-            infiniteLoop: false,
-            pager: false,
-            minSlides: 3,
-            maxSlides: 7,
-            moveSlides: 1,
-            controls: false,
-            slideMargin: 5,
-            slideWidth: 70,
-            nextSelector: '#pager-control_right',
-            prevSelector: '#pager-control_left',
-            nextText: '',
-            prevText: ''
-        });
-    }
-
-    if ($(window).width() <= 600) {
-        $('.certificates-slider').bxSlider({
-            infiniteLoop: true,
-            minSlides: 2,
-            maxSlides: 2,
-            moveSlides: 1,
-            slideMargin: 10,
-            slideWidth: 180,
-            controls: false
-        });
-
-        $('.partners-slider').bxSlider({
-            infiniteLoop: false,
-            pager: false,
-            minSlides: 2,
-            maxSlides: 2,
-            moveSlides: 1,
-            slideMargin: 40,
-            slideWidth: 155,
-            controls: false
-
-        });
-
-        $('.about-slider').bxSlider({
-            pagerCustom: '#about-slider-pager',
-            slideMargin: 15,
-            controls: false,
-            minSlides: 1,
-            maxSlides: 1
-        });
-
-        $('.slider-pager').bxSlider({
-            infiniteLoop: false,
-            pager: false,
-            minSlides: 4,
-            maxSlides: 6,
-            moveSlides: 1,
-            controls: false,
-            slideMargin: 12,
-            slideWidth: 60,
-            nextSelector: '#pager-control_right',
-            prevSelector: '#pager-control_left',
-            nextText: '',
-            prevText: ''
-        });
-    }
-
-    if ($(window).width() <= 340) {
-
-
-        $('.certificates-slider').bxSlider({
-            infiniteLoop: true,
-            minSlides: 1,
-            maxSlides: 1,
-            moveSlides: 1,
-            // slideMargin: 10,
-            // slideWidth: 180,
-            controls: false
-        });
-        $('.partners-slider-index').bxSlider({
-            infiniteLoop: true,
-            pager: false,
-            minSlides: 1,
-            maxSlides: 1,
-            moveSlides: 1,
-            slideMargin: 60,
-            slideWidth: 165
-        });
-
-        $('.partners-slider').bxSlider({
-            infiniteLoop: false,
-            pager: false,
-            minSlides: 1,
-            maxSlides: 1,
-            moveSlides: 1,
-            slideMargin: 40,
-            slideWidth: 155,
-            controls: false
-
-        });
-
-        $('.slider-pager').bxSlider({
-            infiniteLoop: false,
-            pager: false,
-            minSlides: 3,
-            maxSlides: 3,
-            moveSlides: 1,
-            controls: false,
-            slideMargin: 5,
-            slideWidth: 60,
-            nextSelector: '#pager-control_right',
-            prevSelector: '#pager-control_left',
-            nextText: '',
-            prevText: ''
-        });
-
     }
 
 

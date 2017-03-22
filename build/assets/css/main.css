@@ -413,6 +413,10 @@ body {
 
 }
 
+.index-service {
+    margin-top: 10px;
+}
+
 .review-slider {
     margin-top: 20px;
 }
@@ -489,6 +493,7 @@ body {
     margin-top: 37px;
     display: inline-block;
     width: 100%;
+    clear: both;
 }
 
 .index-service-info {
@@ -740,7 +745,7 @@ body {
 }
 
 /*.navigation__list.flex_row.flex_start {*/
-    /*justify-content: space-between;*/
+/*justify-content: space-between;*/
 /*}*/
 
 .footer__info .navigation__list-item:hover .navigation__list-link,
@@ -1234,13 +1239,18 @@ a.bread-crumbs__item-text {
 }
 
 .uk-modal {
-    z-index: 10000;
+    z-index: 10005;
 }
 
 .partners-slider-wrap {
     margin: 0 -30px;
     background-color: #dadbdb;
     padding: 25px 60px;
+}
+
+.ios-partners-slider-wrap {
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .partners-slide {
@@ -1367,7 +1377,8 @@ a.bread-crumbs__item-text {
 }
 
 .catalog-horizontal .catalog-horizontal__item:nth-child(odd) .catalog-horizontal-image-wrap::before {
-    left: -6%px;
+    left: -6%;
+    /*left: -6%px;*/
 
     background: rgba(121, 129, 142, 1);
     background: -webkit-gradient(left top, right top, color-stop(0%, rgba(121, 129, 142, 1)), color-stop(50%, rgba(148, 155, 165, 1)), color-stop(95%, rgba(151, 158, 168, 0)), color-stop(100%, rgba(151, 158, 168, 0)));
@@ -1498,7 +1509,7 @@ a.bread-crumbs__item-text {
 }
 
 /*.vacancy button.btn {*/
-    /*margin-bottom: 50px;*/
+/*margin-bottom: 50px;*/
 /*}*/
 
 .review:hover {
@@ -2830,5 +2841,4 @@ body #latest-products-slider #mTS_2_container {
     text-align: center;
     margin-top: 25px;
 }
-
 

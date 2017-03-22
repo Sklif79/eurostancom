@@ -33,6 +33,11 @@
 
 /* ******************************* 1500px **************************** */
 @media screen and (max-width: 1500px) {
+    .partners-slider-wrap {
+        margin-left: -18px;
+        margin-right: -18px;
+    }
+
     .header-top__email {
         display: inline-block;
     }
@@ -347,11 +352,11 @@
     }
 
     .progects-item:hover .progects-item__overlay {
-    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-    opacity: 0;
-    transform: scale(1) rotate(0deg);
-    transition-delay: 0s;
+        -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        opacity: 0;
+        transform: scale(1) rotate(0deg);
+        transition-delay: 0s;
     }
 
     .progects-wrapper__corner {
@@ -648,6 +653,7 @@
 
     .about-slider-wrap .bx-wrapper {
         width: 95%;
+        height: auto;
     }
 
     .pager-control_right {
@@ -854,7 +860,7 @@
         width: 15px;
         height: 12px;
         left: -22px;
-        top: 4px;;
+        top: 4px;
     }
 
     .contact__title {
@@ -1045,11 +1051,11 @@
     }
 
     .review-slider-wrapper .bx-wrapper .bx-controls-direction .bx-next {
-        right: -20px;
+        right: -15px;
     }
 
     .review-slider-wrapper .bx-wrapper .bx-controls-direction .bx-prev {
-        left: -5px;
+        left: -15px;
     }
 
     .partners.index-partners {
@@ -1188,12 +1194,12 @@
 /* ******************************* 325px **************************** */
 @media screen and (max-width: 325px) {
     /*.catalog-horizontal-text {*/
-        /*width: 61%;*/
-        /*padding-left: 30px;*/
+    /*width: 61%;*/
+    /*padding-left: 30px;*/
     /*}*/
 
     .catalog-horizontal__title, .catalog-horizontal__description {
-         padding-right: 0;
+        padding-right: 0;
     }
 
 
@@ -1373,9 +1379,9 @@
         height: 134px;
     }
 
-    .certificates-slide {
-        margin-left: 25px;
-    }
+    /*.certificates-slide {*/
+        /*margin-left: 22px;*/
+    /*}*/
 
     .certificates-slide-inner {
         padding: 5px 0;
@@ -1426,7 +1432,7 @@
     }
 
     /*.spoiler {*/
-        /*display: inline;*/
+    /*display: inline;*/
     /*}*/
 
     .service-info__text  * {
@@ -1459,7 +1465,7 @@
 
     .catalogs-slider-wrap {
         /*float: left;*/
-         margin-right: 0;
+        margin-right: 0;
         margin-bottom: 35px;
     }
 
@@ -1484,15 +1490,15 @@
     }
 
 
-        .news-grid__item {
+    .news-grid__item {
 
-            height: auto;
-        }
+        height: auto;
+    }
 
-        .vacancy__section-block {
-            margin-top: 20px;
-            padding-top: 0;
-        }
+    .vacancy__section-block {
+        margin-top: 20px;
+        padding-top: 0;
+    }
 
     .news-list-item-mob-title {
         display: inline-block;
@@ -1511,7 +1517,7 @@
     }
 
     /*.vacancy button.btn {*/
-        /*margin-bottom: 50px;*/
+    /*margin-bottom: 50px;*/
     /*}*/
 
 

@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     $('.about-slider').bxSlider({
         pagerCustom: '#about-slider-pager',
         slideMargin: 15
@@ -40,7 +41,7 @@ $(document).ready(function () {
     $('.partners-slider-index').bxSlider({
         infiniteLoop: true,
         pager: false,
-        minSlides: 1,
+        minSlides: 6,
         maxSlides: 6,
         moveSlides: 1,
         slideMargin: 60,
@@ -81,20 +82,27 @@ $(document).ready(function () {
 
     $('.review-slider').bxSlider({
         infiniteLoop: true,
-        minSlides: 1,
+        minSlides: 4,
         maxSlides: 4,
+        // controls: false,
         moveSlides: 1,
         slideWidth: 300,
         pager: false
     });
 
     if ($(window).width() <= 1370) {
+        $('.about-slider').bxSlider({
+            pagerCustom: '#about-slider-pager',
+            slideMargin: 15,
+            adaptiveHeight: true,
+            controls: false
+        });
         $('.certificates-slider').bxSlider({
             infiniteLoop: true,
             minSlides: 1,
             maxSlides: 5,
             moveSlides: 1,
-            slideMargin: 15,
+            slideMargin: 5,
             slideWidth: 180,
             controls: false
         });
@@ -139,6 +147,26 @@ $(document).ready(function () {
             slideWidth: 180,
             controls: false
         });
+
+        $('.review-slider').bxSlider({
+            infiniteLoop: true,
+            minSlides: 2,
+            maxSlides: 2,
+            controls: false,
+            moveSlides: 1,
+            slideWidth: 300,
+            pager: false
+        });
+
+        $('.partners-slider-index').bxSlider({
+            infiniteLoop: true,
+            pager: false,
+            minSlides: 5,
+            maxSlides: 5,
+            moveSlides: 1,
+            slideMargin: 60,
+            slideWidth: 165
+        });
     }
 
     if ($(window).width() <= 780) {
@@ -150,6 +178,27 @@ $(document).ready(function () {
             slideMargin: 30,
             slideWidth: 180,
             controls: false
+        });
+
+        $('.partners-slider-index').bxSlider({
+            infiniteLoop: true,
+            pager: false,
+            minSlides: 3,
+            maxSlides: 3,
+            moveSlides: 1,
+            slideMargin: 60,
+            slideWidth: 165
+        });
+
+        $('.review-slider').bxSlider({
+            infiniteLoop: true,
+            minSlides: 1,
+            maxSlides: 1,
+            moveSlides: 1,
+            controls: false,
+            // slideWidth: 300,
+            adaptiveHeight: true,
+            pager: false
         });
 
         $('.partners-slider').bxSlider({
@@ -164,13 +213,18 @@ $(document).ready(function () {
 
         });
 
+
+
         $('.about-slider').bxSlider({
             pagerCustom: '#about-slider-pager',
-            slideMargin: 15,
-            controls: false,
             minSlides: 1,
             maxSlides: 1,
+            slideMargin: 15,
+            adaptiveHeight: true,
+            controls: false
         });
+
+
 
         $('.slider-pager').bxSlider({
             infiniteLoop: false,
@@ -186,26 +240,24 @@ $(document).ready(function () {
             nextText: '',
             prevText: ''
         });
-
-
     }
 
-    if ($(window).width() <= 340) {
+    if ($(window).width() <= 600) {
         $('.certificates-slider').bxSlider({
             infiniteLoop: true,
-            minSlides: 1,
-            maxSlides: 1,
+            minSlides: 2,
+            maxSlides: 2,
             moveSlides: 1,
             slideMargin: 10,
-            // slideWidth: 180,
+            slideWidth: 180,
             controls: false
         });
 
         $('.partners-slider').bxSlider({
             infiniteLoop: false,
             pager: false,
-            minSlides: 1,
-            maxSlides: 1,
+            minSlides: 2,
+            maxSlides: 2,
             moveSlides: 1,
             slideMargin: 40,
             slideWidth: 155,
@@ -218,7 +270,57 @@ $(document).ready(function () {
             slideMargin: 15,
             controls: false,
             minSlides: 1,
+            maxSlides: 1
+        });
+
+        $('.slider-pager').bxSlider({
+            infiniteLoop: false,
+            pager: false,
+            minSlides: 4,
+            maxSlides: 6,
+            moveSlides: 1,
+            controls: false,
+            slideMargin: 12,
+            slideWidth: 60,
+            nextSelector: '#pager-control_right',
+            prevSelector: '#pager-control_left',
+            nextText: '',
+            prevText: ''
+        });
+    }
+
+    if ($(window).width() <= 340) {
+
+
+        $('.certificates-slider').bxSlider({
+            infiniteLoop: true,
+            minSlides: 1,
             maxSlides: 1,
+            moveSlides: 1,
+            // slideMargin: 10,
+            // slideWidth: 180,
+            controls: false
+        });
+        $('.partners-slider-index').bxSlider({
+            infiniteLoop: true,
+            pager: false,
+            minSlides: 1,
+            maxSlides: 1,
+            moveSlides: 1,
+            slideMargin: 60,
+            slideWidth: 165
+        });
+
+        $('.partners-slider').bxSlider({
+            infiniteLoop: false,
+            pager: false,
+            minSlides: 1,
+            maxSlides: 1,
+            moveSlides: 1,
+            slideMargin: 40,
+            slideWidth: 155,
+            controls: false
+
         });
 
         $('.slider-pager').bxSlider({
@@ -236,13 +338,12 @@ $(document).ready(function () {
             prevText: ''
         });
 
-
-
-
     }
 
 
-
+    $(".read-more").on("click",function () {
+        $('.common__text').toggleClass('hide_article');
+    });
 
 
 
@@ -300,6 +401,16 @@ $(document).ready(function () {
             $(this).text("Скрыть");
         }
     });
+    $('.more-link').on("click", function () {
+        var parent = $(this).prev();
+        parent.toggleClass("vacancy-spoiler");
+    });
+
+    //spoiler
+    // $('.more-link').on("click", function () {
+    //
+    //     $('.vacancy__section-block').toggleClass("vacancy-spoiler");
+    // });
 
 
     //popup

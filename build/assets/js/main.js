@@ -1,5 +1,18 @@
 $(document).ready(function () {
+    // $('a.btn-prev').click(function (e) {
+    //     // custom handling here
+    //     e.preventDefault();
+    // });
+    //
+    // $('a.btn-next').click(function (e) {
+    //     // custom handling here
+    //     e.preventDefault();
+    // });
+
+
     if (device.ios()) {
+        $('.contact').css('display','block');
+
         $('.review-slider').bxSlider({
             infiniteLoop: true,
             minSlides: 1,
@@ -15,17 +28,17 @@ $(document).ready(function () {
             pager: false,
             minSlides: 1,
             maxSlides: 1,
-            moveSlides: 1,
+            moveSlides: 1
         });
 
         $('.partners-slider').addClass('ios-partners-slider-wrap');
-///++++
+
         $('.partners-slider-index').bxSlider({
             infiniteLoop: true,
             pager: false,
             minSlides: 1,
             maxSlides: 1,
-            moveSlides: 1,
+            moveSlides: 1
             // slideMargin: 60,
             // slideWidth: 165
         });
@@ -35,11 +48,11 @@ $(document).ready(function () {
             minSlides: 1,
             maxSlides: 1,
             moveSlides: 1,
-            slideMargin: 10000,
-            slideWidth: 180,
+            slideMargin: 10,
+            slideWidth: 180
             // controls: false
         });
-////+++++
+
         $('.about-slider').bxSlider({
             pagerCustom: '#about-slider-pager',
             slideMargin: 15

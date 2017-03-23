@@ -1811,7 +1811,7 @@ a.dark-blue_text {
 
 .news-link {
     position: absolute;
-    bottom: 0;
+    bottom: -18px;
 }
 
 .more-news__wrap {

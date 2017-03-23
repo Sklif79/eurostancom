@@ -18,8 +18,8 @@ workspace.xml
 .settings
 .tmproj
 .nvmrc
-.idea/*
 node_modules/*
-workspace.xml
 sftp-config.json
 Thumbs.db
+.idea/
+
